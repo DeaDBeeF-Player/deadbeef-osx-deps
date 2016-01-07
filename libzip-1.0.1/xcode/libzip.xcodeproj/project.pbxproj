@@ -151,7 +151,6 @@
 		4B01D72615B2F57F002D5007 /* zipmerge.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B01D72215B2F572002D5007 /* zipmerge.c */; };
 		4B01D73215B2F5EE002D5007 /* zipconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDC729E15B1B4E900236D3C /* zipconf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B01D73415B2F5F4002D5007 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDC72A015B1B56400236D3C /* config.h */; };
-		4B01D73C15B2F6AF002D5007 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B01D70815B2F4CF002D5007 /* libz.dylib */; };
 		4B82CED419915F360097BC18 /* zip_file_set_mtime.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B82CED319915F360097BC18 /* zip_file_set_mtime.c */; };
 		4B82CED519915F360097BC18 /* zip_file_set_mtime.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B82CED319915F360097BC18 /* zip_file_set_mtime.c */; };
 		4B97204F188EBE85002FAFAD /* zip_file_get_external_attributes.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B97204D188EBE85002FAFAD /* zip_file_get_external_attributes.c */; };
@@ -495,6 +494,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2DA0032C1C3E643600269653 /* libzip copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "libzip copy-Info.plist"; path = "/Users/waker/prj/deadbeef/osx/deps/libzip-1.0.1/xcode/libzip copy-Info.plist"; sourceTree = "<absolute>"; };
+		2DA0039C1C3E647C00269653 /* libzip copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "libzip copy2-Info.plist"; path = "/Users/waker/prj/deadbeef/osx/deps/libzip-1.0.1/xcode/libzip copy2-Info.plist"; sourceTree = "<absolute>"; };
 		3D77B86517009AA1000A5794 /* extract-version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "extract-version.sh"; sourceTree = SOURCE_ROOT; };
 		4B01D68B15B2F3F1002D5007 /* libzip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libzip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B01D6FD15B2F4B1002D5007 /* zipmerge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = zipmerge; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -828,7 +829,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B01D73C15B2F6AF002D5007 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1170,6 +1170,8 @@
 				4B28A9EA15BACBE100D0C17D /* man */,
 				4BDC71CA15B181DA00236D3C /* Frameworks */,
 				4BDC71C915B181DA00236D3C /* Products */,
+				2DA0032C1C3E643600269653 /* libzip copy-Info.plist */,
+				2DA0039C1C3E647C00269653 /* libzip copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 			tabWidth = 8;
@@ -2028,6 +2030,7 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSION_INFO_BUILDER = "";
 				VERSION_INFO_FILE = "";
@@ -2060,6 +2063,7 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSION_INFO_BUILDER = "";
 				VERSION_INFO_FILE = "";
