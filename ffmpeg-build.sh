@@ -3,6 +3,7 @@
     --enable-static --disable-shared --prefix=$HOME/prj/deadbeef/osx/deps/ffmpeg\
     --enable-pic --enable-gpl --disable-doc --disable-ffplay\
     --disable-ffprobe --disable-ffserver --disable-avdevice --disable-ffmpeg\
+    --disable-videotoolbox\
     --disable-postproc --disable-swresample --disable-avfilter\
     --disable-swscale --enable-network --disable-swscale-alpha --disable-vdpau\
     --disable-dxva2 --enable-hwaccels\
@@ -19,7 +20,7 @@
     --enable-demuxer=tak --enable-decoder=tak\
     --enable-decoder=dsd_lsbf --enable-decoder=dsd_lsbf_planar\
     --enable-decoder=dsd_msbf --enable-decoder=dsd_msbf_planar\
-    --enable-demuxer=dsf\
+    --enable-demuxer=dsf --enable-demuxer=iff\
     --disable-libopencore-amrnb --disable-libopencore-amrwb\
     --disable-version3 --disable-mmx\
     --disable-yasm\
