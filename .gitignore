@@ -64,3 +64,4 @@ xcshareddata
 testrun.sh
 INSTALL
 .DS_Store
+libzip-1.0.1/xcode/build
