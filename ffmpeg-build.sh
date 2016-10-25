@@ -1,5 +1,5 @@
 # This is the commands used to build the ffmpeg libs provided here
-./configure --extra-cflags="-fPIC -isysroot /Applications/Xcode6.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -mmacosx-version-min=10.6"\
+./configure --extra-cflags="-fPIC -isysroot /Applications/Xcode7.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -mmacosx-version-min=10.6"\
     --enable-static --disable-shared --prefix=$HOME/prj/deadbeef/osx/deps/ffmpeg\
     --enable-pic --enable-gpl --disable-doc --disable-ffplay\
     --disable-ffprobe --disable-ffserver --disable-avdevice --disable-ffmpeg\
@@ -20,6 +20,7 @@
     --enable-demuxer=tak --enable-decoder=tak\
     --enable-decoder=dsd_lsbf --enable-decoder=dsd_lsbf_planar\
     --enable-decoder=dsd_msbf --enable-decoder=dsd_msbf_planar\
+    --enable-decoder=aac\
     --enable-demuxer=dsf --enable-demuxer=iff\
     --disable-libopencore-amrnb --disable-libopencore-amrwb\
     --disable-version3 --disable-mmx\
