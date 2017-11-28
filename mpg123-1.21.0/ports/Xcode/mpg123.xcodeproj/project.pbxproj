@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0A7FA61FCE17B9009C8870 /* lfs_alias.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CA7152A4E7000B4F5A8 /* lfs_alias.c */; };
 		CD132C23152A4B8000B4F5A8 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = CD132C21152A4B8000B4F5A8 /* config.h */; };
 		CD132C24152A4B8000B4F5A8 /* mpg123.h in Headers */ = {isa = PBXBuildFile; fileRef = CD132C22152A4B8000B4F5A8 /* mpg123.h */; };
 		CD132C7E152A4D7E00B4F5A8 /* compat.h in Headers */ = {isa = PBXBuildFile; fileRef = CD132C62152A4D7E00B4F5A8 /* compat.h */; };
@@ -50,7 +51,6 @@
 		CD132CBE152A4E7000B4F5A8 /* layer1.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CA4152A4E7000B4F5A8 /* layer1.c */; };
 		CD132CBF152A4E7000B4F5A8 /* layer2.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CA5152A4E7000B4F5A8 /* layer2.c */; };
 		CD132CC0152A4E7000B4F5A8 /* layer3.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CA6152A4E7000B4F5A8 /* layer3.c */; };
-		CD132CC1152A4E7000B4F5A8 /* lfs_alias.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CA7152A4E7000B4F5A8 /* lfs_alias.c */; };
 		CD132CC2152A4E7000B4F5A8 /* libmpg123.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CA8152A4E7000B4F5A8 /* libmpg123.c */; };
 		CD132CC3152A4E7000B4F5A8 /* ntom.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CA9152A4E7000B4F5A8 /* ntom.c */; };
 		CD132CC4152A4E7000B4F5A8 /* optimize.c in Sources */ = {isa = PBXBuildFile; fileRef = CD132CAA152A4E7000B4F5A8 /* optimize.c */; };
@@ -476,13 +476,13 @@
 				CD132CBE152A4E7000B4F5A8 /* layer1.c in Sources */,
 				CD132CBF152A4E7000B4F5A8 /* layer2.c in Sources */,
 				CD132CC0152A4E7000B4F5A8 /* layer3.c in Sources */,
-				CD132CC1152A4E7000B4F5A8 /* lfs_alias.c in Sources */,
 				CD132CC2152A4E7000B4F5A8 /* libmpg123.c in Sources */,
 				CD132CC3152A4E7000B4F5A8 /* ntom.c in Sources */,
 				CD132CC4152A4E7000B4F5A8 /* optimize.c in Sources */,
 				CD132CC5152A4E7000B4F5A8 /* parse.c in Sources */,
 				CD132CC6152A4E7000B4F5A8 /* readers.c in Sources */,
 				CD132CC7152A4E7000B4F5A8 /* stringbuf.c in Sources */,
+				2D0A7FA61FCE17B9009C8870 /* lfs_alias.c in Sources */,
 				CD132CC8152A4E7000B4F5A8 /* synth_8bit.c in Sources */,
 				CD132CC9152A4E7000B4F5A8 /* synth_real.c in Sources */,
 				CD132CCA152A4E7000B4F5A8 /* synth_s32.c in Sources */,
@@ -584,8 +584,10 @@
 		CD132C1C152A48C200B4F5A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/libmpg123.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "lfs_alias_t=off_t";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -595,8 +597,10 @@
 		CD132C1D152A48C200B4F5A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/libmpg123.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "lfs_alias_t=off_t";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
