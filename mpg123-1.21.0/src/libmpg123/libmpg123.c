@@ -696,6 +696,11 @@ static int zero_byte(mpg123_handle *fr)
 static void decode_the_frame(mpg123_handle *fr)
 {
 	size_t needed_bytes = decoder_synth_bytes(fr, frame_expect_outsamples(fr));
+
+	/* More data is needed than the buffer size */
+	if (needed_bytes > fr->buffer.size)
+		return;
+
 	fr->clip += (fr->do_layer)(fr);
 	/*fprintf(stderr, "frame %"OFF_P": got %"SIZE_P" / %"SIZE_P"\n", fr->num,(size_p)fr->buffer.fill, (size_p)needed_bytes);*/
 	/* There could be less data than promised.
