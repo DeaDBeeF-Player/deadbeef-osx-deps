@@ -1359,7 +1359,6 @@
 				4B01D68715B2F3F1002D5007 /* Frameworks */,
 				4B01D68815B2F3F1002D5007 /* Headers */,
 				4B01D68915B2F3F1002D5007 /* Resources */,
-				3D77B86617009AC5000A5794 /* Copy Version Info from config.h */,
 				4B972053188EBEB8002FAFAD /* Fix zipconf.h include. */,
 			);
 			buildRules = (
@@ -1590,20 +1589,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D77B86617009AC5000A5794 /* Copy Version Info from config.h */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Version Info from config.h";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./extract-version.sh \"config.h\" \"Info.plist\" ";
-		};
 		4B972053188EBEB8002FAFAD /* Fix zipconf.h include. */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
