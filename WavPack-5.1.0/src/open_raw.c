@@ -196,6 +196,7 @@ WavpackContext *WavpackOpenRawDecoder (
 
             if (block_size > main_bytes) {
                 if (error) strcpy (error, "main block overran available data!");
+                free (wphdr);
                 raw_close_stream (raw_wv);
                 raw_close_stream (raw_wvc);
                 return NULL;
@@ -243,6 +244,7 @@ WavpackContext *WavpackOpenRawDecoder (
 
                 if (block_size > corr_bytes) {
                     if (error) strcpy (error, "correction block overran available data!");
+                    free (wphdr);
                     raw_close_stream (raw_wv);
                     raw_close_stream (raw_wvc);
                     return NULL;
