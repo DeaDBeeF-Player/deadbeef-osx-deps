@@ -2,7 +2,7 @@
 /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Set to 1 if the compile is GNU GCC. */
-#define COMPILER_IS_GCC 1
+#define COMPILER_IS_GCC 0
 
 /* Target processor clips on negative float to int conversion. */
 #define CPU_CLIPS_NEGATIVE 0
