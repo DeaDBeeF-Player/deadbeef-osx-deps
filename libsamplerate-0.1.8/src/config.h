@@ -2,7 +2,7 @@
 /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Set to 1 if the compile is GNU GCC. */
-#define COMPILER_IS_GCC 0
+//#define COMPILER_IS_GCC 0
 
 /* Target processor clips on negative float to int conversion. */
 #define CPU_CLIPS_NEGATIVE 0
@@ -111,13 +111,13 @@
 #define OS_IS_WIN32 0
 
 /* Name of package */
-#define PACKAGE "libsamplerate"
+//#define PACKAGE "libsamplerate"
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT "erikd@mega-nerd.com"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "libsamplerate"
+//#define PACKAGE_NAME "libsamplerate"
 
 /* Define to the full name and version of this package. */
 #define PACKAGE_STRING "libsamplerate 0.1.8"
@@ -129,7 +129,7 @@
 #define PACKAGE_URL "http://www.mega-nerd.com/libsamplerate/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.1.8"
+//#define PACKAGE_VERSION "0.1.8"
 
 /* The size of `double', as computed by sizeof. */
 #define SIZEOF_DOUBLE 8
@@ -147,4 +147,4 @@
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "0.1.8"
+//#define VERSION "0.1.8"
