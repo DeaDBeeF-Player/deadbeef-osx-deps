@@ -1,5 +1,5 @@
 # This is the commands used to build the ffmpeg libs provided here
-./configure --extra-cflags="-fPIC -isysroot /Applications/Xcode12_0-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64" --extra-ldflags="-isysroot /Applications/Xcode12_0-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64"\
+./configure --extra-cflags="-fPIC -isysroot /Applications/Xcode_12_5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64" --extra-ldflags="-isysroot /Applications/Xcode_12_5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64"\
     --arch=arm64\
     --enable-cross-compile\
     --target-os=darwin\
@@ -33,3 +33,7 @@
     --enable-protocol=file --enable-protocol=http
 
 make -j8
+
+install_name_tool -add_rpath @executable_path/../PlugIns libavcodec/libavcodec.59.dylib 
+install_name_tool -add_rpath @executable_path/../PlugIns libavutil/libavutil.57.dylib
+install_name_tool -add_rpath @executable_path/../PlugIns libavformat/libavformat.59.dylib
