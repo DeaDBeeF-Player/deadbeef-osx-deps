@@ -150,7 +150,6 @@
 		4B01D72515B2F57B002D5007 /* zipcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B01D72115B2F572002D5007 /* zipcmp.c */; };
 		4B01D72615B2F57F002D5007 /* zipmerge.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B01D72215B2F572002D5007 /* zipmerge.c */; };
 		4B01D73215B2F5EE002D5007 /* zipconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDC729E15B1B4E900236D3C /* zipconf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B01D73415B2F5F4002D5007 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDC72A015B1B56400236D3C /* config.h */; };
 		4B82CED419915F360097BC18 /* zip_file_set_mtime.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B82CED319915F360097BC18 /* zip_file_set_mtime.c */; };
 		4B82CED519915F360097BC18 /* zip_file_set_mtime.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B82CED319915F360097BC18 /* zip_file_set_mtime.c */; };
 		4B97204F188EBE85002FAFAD /* zip_file_get_external_attributes.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B97204D188EBE85002FAFAD /* zip_file_get_external_attributes.c */; };
@@ -819,7 +818,6 @@
 		4BDC729815B1B2A600236D3C /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zip.h; path = ../lib/zip.h; sourceTree = "<group>"; };
 		4BDC729915B1B2A600236D3C /* zipint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zipint.h; path = ../lib/zipint.h; sourceTree = "<group>"; };
 		4BDC729E15B1B4E900236D3C /* zipconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zipconf.h; sourceTree = SOURCE_ROOT; };
-		4BDC72A015B1B56400236D3C /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = SOURCE_ROOT; };
 		4BE402AC19D94AE400298248 /* zip_source_is_deleted.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip_source_is_deleted.c; sourceTree = "<group>"; };
 		4BEF35C31AF4D92D00974F28 /* zip_source_win32handle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip_source_win32handle.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1204,7 +1202,6 @@
 		4BDC71E315B182B200236D3C /* libzip */ = {
 			isa = PBXGroup;
 			children = (
-				4BDC72A015B1B56400236D3C /* config.h */,
 				4BDC729E15B1B4E900236D3C /* zipconf.h */,
 				4BDC729815B1B2A600236D3C /* zip.h */,
 				4BDC729915B1B2A600236D3C /* zipint.h */,
@@ -1344,7 +1341,6 @@
 			files = (
 				4BDC729B15B1B2C400236D3C /* zip.h in Headers */,
 				4BDC729F15B1B4E900236D3C /* zipconf.h in Headers */,
-				4B01D73415B2F5F4002D5007 /* config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2015,6 +2011,7 @@
 				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				MACH_O_TYPE = staticlib;
@@ -2050,6 +2047,7 @@
 				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				MACH_O_TYPE = staticlib;

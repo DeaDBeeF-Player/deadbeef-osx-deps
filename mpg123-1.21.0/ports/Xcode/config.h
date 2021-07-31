@@ -1,4 +1,8 @@
+// Prevent using platform configuration from this file,
+// since most of the code doesn't respect HAVE_CONFIG_H
+
 #include "TargetConditionals.h"
+# if 0
 
 #if TARGET_IPHONE_SIMULATOR
 	#define DEFAULT_OUTPUT_MODULE "dummy"
@@ -60,6 +64,8 @@
     #define OPT_GENERIC
 #else
     #error "Unknown target."
+#endif
+
 #endif
 
 /* #undef ACCURATE_ROUNDING */
@@ -195,3 +201,5 @@
 /* #undef uintptr_t */
 
 #define REAL_IS_FLOAT
+
+

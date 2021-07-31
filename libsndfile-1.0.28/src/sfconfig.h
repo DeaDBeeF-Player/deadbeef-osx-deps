@@ -32,9 +32,6 @@
 #ifndef SFCONFIG_H
 #define SFCONFIG_H
 
-/* Include the Autoconf generated file. */
-#include "config.h"
-
 /* Now fiddle the values. */
 
 #ifndef HAVE_ALSA_ASOUNDLIB_H
