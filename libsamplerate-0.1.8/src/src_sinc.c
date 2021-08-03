@@ -741,6 +741,12 @@ calc_output_hex (SINC_FILTER *filter, increment_t increment, increment_t start_f
 	{	fraction = fp_to_double (filter_index) ;
 		indx = fp_to_int (filter_index) ;
 
+        // +deadbeef: ASAN error: indx becomes 2463, which causes out of bounds read
+        // Occurs when resampling from 96K to 44100
+        if (indx >= filter->coeff_half_len) {
+            indx = filter->coeff_half_len - 1;
+        }
+
 		icoeff = filter->coeffs [indx] + fraction * (filter->coeffs [indx + 1] - filter->coeffs [indx]) ;
 
 		left [0] += icoeff * filter->buffer [data_index] ;
@@ -765,6 +771,11 @@ calc_output_hex (SINC_FILTER *filter, increment_t increment, increment_t start_f
 	do
 	{	fraction = fp_to_double (filter_index) ;
 		indx = fp_to_int (filter_index) ;
+        // +deadbeef: ASAN error: indx becomes 2463, which causes out of bounds read
+        // Occurs when resampling from 96K to 44100
+        if (indx >= filter->coeff_half_len) {
+            indx = filter->coeff_half_len - 1;
+        }
 
 		icoeff = filter->coeffs [indx] + fraction * (filter->coeffs [indx + 1] - filter->coeffs [indx]) ;
 
