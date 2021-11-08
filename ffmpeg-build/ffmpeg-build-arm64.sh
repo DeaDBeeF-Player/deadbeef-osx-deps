@@ -1,5 +1,6 @@
 # This is the commands used to build the ffmpeg libs provided here
-./configure --extra-cflags="-fPIC -isysroot /Applications/Xcode_12_5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64" --extra-ldflags="-isysroot /Applications/Xcode_12_5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64"\
+set -ex
+./configure --extra-cflags="-fPIC -isysroot /Applications/Xcode_13_1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64" --extra-ldflags="-isysroot /Applications/Xcode_13_1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -arch arm64"\
     --arch=arm64\
     --enable-cross-compile\
     --target-os=darwin\
@@ -34,6 +35,12 @@
 
 make -j8
 
-install_name_tool -add_rpath @executable_path/../PlugIns libavcodec/libavcodec.59.dylib 
-install_name_tool -add_rpath @executable_path/../PlugIns libavutil/libavutil.57.dylib
-install_name_tool -add_rpath @executable_path/../PlugIns libavformat/libavformat.59.dylib
+install_name_tool -add_rpath "@executable_path/../PlugIns" libavcodec/libavcodec.dylib 
+install_name_tool -add_rpath "@executable_path/../PlugIns" libavutil/libavutil.dylib
+install_name_tool -add_rpath "@executable_path/../PlugIns" libavformat/libavformat.dylib
+install_name_tool -id "@rpath/libavcodec.58.dylib" libavcodec/libavcodec.dylib 
+install_name_tool -id "@rpath/libavutil.56.dylib" libavutil/libavutil.dylib 
+install_name_tool -id "@rpath/libavformat.58.dylib" libavformat/libavformat.dylib 
+install_name_tool -change "/Users/waker/Downloads/ffmpeg-4.4/build/arm64/lib/libavutil.56.dylib" "@rpath/libavutil.56.dylib" libavformat/libavformat.dylib
+install_name_tool -change "/Users/waker/Downloads/ffmpeg-4.4/build/arm64/lib/libavcodec.58.dylib" "@rpath/libavcodec.58.dylib" libavformat/libavformat.dylib
+install_name_tool -change "/Users/waker/Downloads/ffmpeg-4.4/build/arm64/lib/libavutil.56.dylib" "@rpath/libavutil.56.dylib" libavcodec/libavcodec.dylib
