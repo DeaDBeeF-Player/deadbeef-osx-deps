@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -1534,7 +1534,8 @@
 		4BDC71BF15B181DA00236D3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1410;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
 				ORGANIZATIONNAME = NiH;
 			};
 			buildConfigurationList = 4BDC71C215B181DA00236D3C /* Build configuration list for PBXProject "libzip" */;
@@ -1588,6 +1589,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		4B972053188EBEB8002FAFAD /* Fix zipconf.h include. */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1598,7 +1600,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sed \"s,<zipconf.h>,<$EXECUTABLE_NAME/zipconf.h>,\" ../lib/zip.h > \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Headers/zip.h\"";
+			shellScript = "sed \"s,<zipconf.h>,<$EXECUTABLE_NAME/zipconf.h>,\" ../lib/zip.h > \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Headers/zip.h\"\n";
 		};
 		4BDC72A515B1B71500236D3C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
